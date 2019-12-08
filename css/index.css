@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'icomoon';
-    src:  url('../fonts/icomoon.eot?dx3gwp');
-    src:  url('../fonts/icomoon.eot?dx3gwp#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?dx3gwp') format('truetype'),
-    url('../fonts/icomoon.woff?dx3gwp') format('woff'),
-    url('../fonts/icomoon.svg?dx3gwp#icomoon') format('svg');
+    src:  url('../fonts2/icomoon.eot?4y62fb');
+    src:  url('../fonts2/icomoon.eot?4y62fb#iefix') format('embedded-opentype'),
+    url('../fonts2/icomoon.ttf?4y62fb') format('truetype'),
+    url('../fonts2/icomoon.woff?4y62fb') format('woff'),
+    url('../fonts2/icomoon.svg?4y62fb#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -17,10 +17,10 @@ body{
 }
 h2{
     margin: 0;
-    padding: 0;
+    padding: 5px 0 0 10px;
 }
 .icon{
-    font-family: "icomoon";
+    font-family: 'icomoon' !important;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -81,6 +81,11 @@ h2{
     line-height: 60px;
     cursor: pointer;
     transition: 0.2s;
+
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
 }
 .listunit:hover{
     color:#fff;
@@ -172,9 +177,8 @@ h2{
     position: absolute;
     top: 0;
     right: 0;
-    height: 1000px;
+    /*height: 3000px;*/
     width: 100%;
-    overflow: hidden;
     transition: 0.3s;
 }
 .header{
@@ -198,7 +202,30 @@ h2{
     height: 58px;
     float: left;
     margin-right: 10px;
-    background-color: rgba(0,0,0,0.2);
+    color:#cccccc;
+    text-align: center;
+    line-height: 58px;
+    font-size: 22px;
+    transition: 0.2s;
+
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+.c:hover{
+    color:#fff;
+    background-color: rgba(0,0,0,0.1);
+}
+.c-underline {
+    width: 0;
+    height: 2px;
+    margin: auto;
+    background-color: rgb(189, 143, 255);
+    transition: .2s;
+}
+.c-current{
+    width: 140px;
 }
 .search-box{
     position: absolute;
@@ -224,7 +251,7 @@ h2{
     width: 38px;
     height: 38px;
     margin-top: 10px;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.2);
     cursor: pointer;
     color:rgb(198,196,221);
     font-size: 30px;
@@ -236,24 +263,25 @@ h2{
     top: 70px;
     right: 0;
     width: 100%;
-    height: 2000px;
-
+    /*height: 3000px;*/
 }
 .main{
     width: 900px;
-    height: 100%;
+    /*height: 3000px;*/
     margin: 0 auto 0 auto;
 }
 .mainunitcontainer{
+    height: auto;
     width: 100%;
     margin-top: 2px;
     background-color: rgb(224, 213, 240);
     overflow: hidden;
-    transition: 0.3s;
 }
 .mainunit{
+    height: auto;
     width: 890px;
     margin: 5px 5px 0 5px;
+    transition: 0.3s;
 }
 .main-buttons{
     width: 860px;
@@ -266,21 +294,26 @@ h2{
     -ms-user-select:none;
     user-select:none;
 }
-h2{
-    padding: 5px 0 0 10px;
-}
-.maintext{
+.textcontainer{
     width: 800px;
     margin: 5px auto 0 auto;
     font-size: 18px;
     overflow: hidden;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 .blogsmaintext{
     height: 70px;
 }
 .resourcemaintext,.messagemaintext{
     height: 50px;
+}
+.mdcontainer{
+    position: relative;
+    z-index: -1;
+    display: none;
+}
+.md{
+    overflow: hidden;
 }
 .main-unfold{
     float:left;
@@ -294,20 +327,20 @@ h2{
     transition: .2s;
     cursor: pointer;
 }
-.main-like,.main-collect{
+.main-like,.main-collect,.main-check{
     float:right;
     width: 36px;
     height: 36px;
-    border-radius: 50%;
+    border-radius: 18px;
     margin: 7px 10px 0 0 ;
     background-color: rgba(0,0,0,0.05);
     color:#111;
     line-height: 36px;
     font-size: 22px;
     cursor: pointer;
+    overflow: hidden;
     transition: .2s;
 }
-.main-unfold:hover,.main-like:hover,.main-collect:hover{
+.main-unfold:hover,.main-like:hover,.main-collect:hover,.main-check:hover{
     background-color: rgba(0,0,0,0.15);
 }
-

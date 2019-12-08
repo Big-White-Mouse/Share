@@ -6,7 +6,7 @@ $(window).resize(function(){
 $("#listbtn").click(function(){
     if(index === 0){
         $("#list").css('left','0px');
-        $("#listbtn").css('left','250px').text('');
+        $("#listbtn").css('left','250px').text('');
         $("#userimg").css('top','20px').css('left','20px').css('width','80px').css('height','80px');
         $("#userid").css('opacity','1').css('top','58px').css('left','80px');
         index = 1;
@@ -46,11 +46,20 @@ $("#userimg").click(function(){
         }
     }
 });
+$(".writeblog").click(function(){
+   $(".mainunitcontainer").css('display','none');
+   $(".mdcontainer").css('display','block');
+});
+$(".c").click(function(){
+    $(".c-underline").removeClass('c-current');
+    $(this).children('div').addClass('c-current');
+});
 $(".main-unfold").attr('isfold','1').click(function(){
     let isfold = $(this).attr('isfold');
+    let h = $(this).parent('div').prev().children('div').children('div').height();
     if(isfold === '1'){
         $(this).text('');
-        $(this).parent('div').prev().children('div').css('height','auto');
+        $(this).parent('div').prev().children('div').css('height',h+'px');
         $(this).attr('isfold','0');
     } else {
         $(this).text('');
@@ -81,4 +90,18 @@ $(".main-like").attr('islike','0').click(function(){
        $(this).css('font-weight','400').css('color','#111');
        $(this).attr('islike','0');
    }
+});
+$(".main-check").attr('ischeck','0').click(function(e){
+    let ischeck = $(this).attr('ischeck');
+    if(ischeck === '0'){
+        $(this).css('font-size','18px').css('color','rgb(219,102,180)').css('width','56px').css('line-height','34px').text('sure?');
+        $(this).attr('ischeck','1');
+        e.stopPropagation();
+        $(this).parent('div').parent('div').click(function(){
+            $(this).children('.main-buttons').children('.main-check').css('width','36px').css('color','#111').css('font-size','22px').css('line-height','36px').text('');
+            $(this).children('.main-buttons').children('.main-check').attr('ischeck','0');
+        })
+    } else if(ischeck === '1'){
+        $(this).parent('div').parent('div').css('display','none');
+    }
 });
