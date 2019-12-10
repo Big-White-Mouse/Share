@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a701fd21-ee9c-4253-8f0c-0a6284bf87a7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/icomoon.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/icomoon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/icomoon.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/icomoon.woff" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
     </list>
@@ -26,7 +20,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../markdown" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../server/Share" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -60,6 +54,8 @@
       <workItem from="1575607690660" duration="25548000" />
       <workItem from="1575687306455" duration="35196000" />
       <workItem from="1575778302881" duration="22264000" />
+      <workItem from="1575857209816" duration="3574000" />
+      <workItem from="1575865324801" duration="73000" />
     </task>
     <servers />
   </component>
@@ -71,7 +67,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

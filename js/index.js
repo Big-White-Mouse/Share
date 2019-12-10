@@ -49,6 +49,7 @@ $("#userimg").click(function(){
 $(".writeblog").click(function(){
    $(".mainunitcontainer").css('display','none');
    $(".mdcontainer").css('display','block');
+   $(".c-underline").removeClass('c-current');
 });
 $(".c").click(function(){
     $(".c-underline").removeClass('c-current');
@@ -104,4 +105,18 @@ $(".main-check").attr('ischeck','0').click(function(e){
     } else if(ischeck === '1'){
         $(this).parent('div').parent('div').css('display','none');
     }
+});
+$(".collect").click(function(){
+    $(".main-collect").each(function(){
+        if($(this).attr('collected') === '1'){
+            $(this).parent('div').parent('div').css('display','block');
+        } else {
+            $(this).parent('div').parent('div').css('display','none');
+        }
+    });
+    $(".message").parent('div').css('display','none');
+});
+$(".messagelist").click(function(){
+    $(".mainunitcontainer").css('display','none');
+    $(".message").parent('div').css('display','block');
 });
