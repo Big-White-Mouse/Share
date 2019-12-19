@@ -2,9 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a701fd21-ee9c-4253-8f0c-0a6284bf87a7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/js/get.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/codemirror/mode/meta.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/codemirror/mode/meta.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/codemirror/mode/php/php.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/codemirror/mode/php/php.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/codemirror/mode/php/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/codemirror/mode/php/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/codemirror/modes.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/codemirror/modes.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +31,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../server/Share" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -55,7 +66,19 @@
       <workItem from="1575687306455" duration="35196000" />
       <workItem from="1575778302881" duration="22264000" />
       <workItem from="1575857209816" duration="3574000" />
-      <workItem from="1575865324801" duration="73000" />
+      <workItem from="1575865395550" duration="5765000" />
+      <workItem from="1575875501966" duration="101000" />
+      <workItem from="1575877791810" duration="14450000" />
+      <workItem from="1575944571276" duration="10466000" />
+      <workItem from="1576071815637" duration="127000" />
+      <workItem from="1576396242665" duration="1738000" />
+      <workItem from="1576398273715" duration="1295000" />
+      <workItem from="1576412492077" duration="27000" />
+      <workItem from="1576569095170" duration="693000" />
+      <workItem from="1576573505290" duration="2792000" />
+      <workItem from="1576675382860" duration="4973000" />
+      <workItem from="1576748035162" duration="6916000" />
+      <workItem from="1576755482084" duration="9412000" />
     </task>
     <servers />
   </component>

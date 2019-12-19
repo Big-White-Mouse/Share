@@ -11,6 +11,8 @@
 <body>
 <div class="bg"></div>
 <div class="container" id="container">
+
+<!--    头部两个按钮及其下划线-->
     <div class="change">
         <div class="login" id="login">
             <span>Login</span>
@@ -25,6 +27,8 @@
             <div class="underline-r" id="underline-r"></div>
         </div>
     </div>
+
+<!--  用户输入的信息  -->
     <div class="info">
         <div class="studentId">
             <span class="title">Student Id</span>
@@ -39,11 +43,26 @@
             <input type="password" name="" id="password2">
         </div>
     </div>
+
+<!--    忘记密码-->
     <div class="forget">Forget ?</div>
+
+<!--    游客登陆-->
     <a class="visitor" href="index.html">Visitor login</a>
-    <div class="button" id="btn">Login</div>
+
+<!--    登录按钮-->
+    <div class="button" id="btn">
+        <span>Login</span>
+        <div class="error" id="error">error</div>
+    </div>
+
 </div>
+
+<!--jquery文件-->
 <script src="js/jquery-3.4.1.js"></script>
+
+<!--页面效果及post用户信息-->
 <script src="js/login.js"></script>
+
 </body>
 </html>

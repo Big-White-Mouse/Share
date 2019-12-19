@@ -175,6 +175,7 @@ h2{
 }
 .rightpage{
     position: absolute;
+    z-index: -1;
     top: 0;
     right: 0;
     /*height: 3000px;*/
@@ -260,12 +261,15 @@ h2{
 }
 .main-container{
     position: relative;
+    z-index: -1;
     top: 70px;
     right: 0;
     width: 100%;
     /*height: 3000px;*/
 }
 .main{
+    position: relative;
+    z-index: -1;
     width: 900px;
     /*height: 3000px;*/
     margin: 0 auto 0 auto;
@@ -294,6 +298,16 @@ h2{
     -ms-user-select:none;
     user-select:none;
 }
+.main-load{
+    width: 900px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    margin: 2px auto 0 auto;
+    color:rgb(198,196,221);
+    font-size: 20px;
+    z-index: -1;
+}
 .textcontainer{
     width: 800px;
     margin: 5px auto 0 auto;
@@ -309,11 +323,30 @@ h2{
 }
 .mdcontainer{
     position: relative;
-    z-index: -1;
+    z-index: 50;
     display: none;
+    background-color: #eee;
 }
 .md{
     overflow: hidden;
+}
+.md-button{
+    margin-top:-10px;
+ }
+.save,.publish{
+    float:left;
+    height: 36px;
+    width: 100px;
+    margin: 7px 0 0 10px;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.05);
+    line-height: 36px;
+    transition: .2s;
+    cursor: pointer;
+    font-size: 18px;
+}
+.save{
+    width: 80px;
 }
 .main-unfold{
     float:left;
@@ -341,6 +374,6 @@ h2{
     overflow: hidden;
     transition: .2s;
 }
-.main-unfold:hover,.main-like:hover,.main-collect:hover,.main-check:hover{
+.main-unfold:hover,.main-like:hover,.main-collect:hover,.main-check:hover,.save:hover,.publish:hover{
     background-color: rgba(0,0,0,0.15);
 }

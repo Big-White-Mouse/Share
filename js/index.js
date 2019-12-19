@@ -1,8 +1,11 @@
-let index = 0;//判断侧边栏状态  index == 0 时为收起  index == 1时为展开
+//响应式
 let winwidth = $(document).width();
 $(window).resize(function(){
     winwidth = $(document).width();
 });
+
+//左侧菜单栏
+let index = 0;//判断侧边栏状态  index == 0 时为收起  index == 1时为展开
 $("#listbtn").click(function(){
     if(index === 0){
         $("#list").css('left','0px');
@@ -29,6 +32,8 @@ $("#listbtn").click(function(){
         index = 0;
     }
 });
+
+//用户详细信息
 let ishidden = 0;//判断用户信息状态 0为隐藏 1为显示
 $("#userimg").click(function(){
     if(index === 1){
@@ -46,66 +51,101 @@ $("#userimg").click(function(){
         }
     }
 });
+
+//md编辑器
 $(".writeblog").click(function(){
    $(".mainunitcontainer").css('display','none');
    $(".mdcontainer").css('display','block');
+   $("#main-load").css('display','none');
    $(".c-underline").removeClass('c-current');
 });
+
+//主界面头部类型切换
 $(".c").click(function(){
     $(".c-underline").removeClass('c-current');
     $(this).children('div').addClass('c-current');
 });
-$(".main-unfold").attr('isfold','1').click(function(){
-    let isfold = $(this).attr('isfold');
-    let h = $(this).parent('div').prev().children('div').children('div').height();
+
+//文章折叠
+function uf(e){
+    let isfold;
+    if($(e).attr('isfold')){
+        isfold = $(e).attr('isfold');
+    } else {
+        isfold = '1';
+    }
+    let h = $(e).parent('div').prev().children('div').children('div').height();
     if(isfold === '1'){
-        $(this).text('');
-        $(this).parent('div').prev().children('div').css('height',h+'px');
-        $(this).attr('isfold','0');
+        $(e).text('');
+        $(e).parent('div').prev().children('div').css('height',h+'px');
+        $(e).attr('isfold','0');
     } else {
-        $(this).text('');
-        if($(this).parent('div').prev().children('div').hasClass('blogsmaintext')){
-            $(this).parent('div').prev().children('div').css('height','70px');
+        $(e).text('');
+        if($(e).parent('div').prev().children('div').hasClass('blogsmaintext')){
+            $(e).parent('div').prev().children('div').css('height','70px');
         } else {
-            $(this).parent('div').prev().children('div').css('height','50px');
+            $(e).parent('div').prev().children('div').css('height','50px');
         }
-        $(this).attr('isfold','1');
+        $(e).attr('isfold','1');
     }
-});
-$(".main-collect").attr('collected','0').click(function(){
-    let collected = $(this).attr('collected');
-    if(collected === '0'){
-        $(this).css('font-weight','800').css('color','rgb(219,102,180)');
-        $(this).attr('collected','1');
+}
+
+//文章收藏
+function cl(e){
+    let collected;
+    if($(e).attr('collected')){
+        collected = $(e).attr('collected');
     } else {
-        $(this).css('font-weight','400').css('color','#111');
-        $(this).attr('collected','0');
+        collected = "0";
     }
-});
-$(".main-like").attr('islike','0').click(function(){
-   let islike = $(this).attr('islike');
-   if(islike === '0'){
-       $(this).css('font-weight','800').css('color','rgb(219,102,180)');
-       $(this).attr('islike','1');
-   } else {
-       $(this).css('font-weight','400').css('color','#111');
-       $(this).attr('islike','0');
-   }
-});
-$(".main-check").attr('ischeck','0').click(function(e){
-    let ischeck = $(this).attr('ischeck');
+    if(collected === '0'){
+        $(e).css('font-weight','800').css('color','rgb(219,102,180)');
+        $(e).attr('collected','1');
+    } else {
+        $(e).css('font-weight','400').css('color','#111');
+        $(e).attr('collected','0');
+    }
+}
+
+//文章赞
+function lk(e){
+    let islike;
+    if($(e).attr('islike')){
+        islike = $(e).attr('islike');
+    } else {
+        islike = '0';
+    }
+    if(islike === '0'){
+        $(e).css('font-weight','800').css('color','rgb(219,102,180)');
+        $(e).attr('islike','1');
+    } else {
+        $(e).css('font-weight','400').css('color','#111');
+        $(e).attr('islike','0');
+    }
+}
+
+//通知收到
+function ck(e){
+    let ischeck;
+    if($(e).attr('ischeck')){
+        ischeck = $(e).attr('ischeck');
+    } else {
+        ischeck = "0";
+    }
     if(ischeck === '0'){
-        $(this).css('font-size','18px').css('color','rgb(219,102,180)').css('width','56px').css('line-height','34px').text('sure?');
-        $(this).attr('ischeck','1');
+        $(e).css('font-size','18px').css('color','rgb(219,102,180)').css('width','56px').css('line-height','34px').text('sure?');
+        $(e).attr('ischeck','1');
         e.stopPropagation();
-        $(this).parent('div').parent('div').click(function(){
-            $(this).children('.main-buttons').children('.main-check').css('width','36px').css('color','#111').css('font-size','22px').css('line-height','36px').text('');
-            $(this).children('.main-buttons').children('.main-check').attr('ischeck','0');
+        $(e).parent('div').parent('div').click(function(){
+            $(e).children('.main-buttons').children('.main-check').css('width','36px').css('color','#111').css('font-size','22px').css('line-height','36px').text('');
+            $(e).children('.main-buttons').children('.main-check').attr('ischeck','0');
         })
     } else if(ischeck === '1'){
-        $(this).parent('div').parent('div').css('display','none');
+        $(e).parent('div').parent('div').css('display','none');
     }
-});
+}
+
+//展示所有收藏的文章
 $(".collect").click(function(){
     $(".main-collect").each(function(){
         if($(this).attr('collected') === '1'){
@@ -116,7 +156,33 @@ $(".collect").click(function(){
     });
     $(".message").parent('div').css('display','none');
 });
+
+//展示所有通知
 $(".messagelist").click(function(){
     $(".mainunitcontainer").css('display','none');
     $(".message").parent('div').css('display','block');
+});
+
+//检测触底加载更多
+let isreach = 1;//防止重复加载
+$(window).scroll(function(){
+    let h = $("#main").outerHeight() + 134;
+    let sc = $(window).scrollTop() + $(window).height();
+    console.log(h);
+    console.log(sc);
+    if(sc >= h && isreach == 1){
+        isreach = 0;
+        $("#main-load").text('--------------正在加载--------------');
+        console.log("总页数="+totalPage);
+        console.log("当前页="+page);
+        if(totalPage > Number(page)){
+            page++;
+            setTimeout("getNewPage()",800);
+            setTimeout(function(){
+                $("#main-load").text('------------滚动加载更多------------');
+            },800);
+        } else {
+            $("#main-load").text('----------------到底啦----------------');
+        }
+    }
 });
