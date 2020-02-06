@@ -1,11 +1,1 @@
-有用的，能被修改的文件
-CSS:
-    login.css
-    index.css
-js:
-    get.js
-    index.js
-    login.js
-
-index.html
-login.html
+## 一个小小的，不完美的小项目，曾经打算用来当作实验室内交流的平台，没有上线便夭折的，由于当时所学的知识太少，导致网页臃肿，代码极其糟糕
